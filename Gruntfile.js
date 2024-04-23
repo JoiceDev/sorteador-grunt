@@ -49,8 +49,7 @@ module.exports = function(grunt) {
                         dest: 'dist/'
                     }
                 ]
-            }
-        },
+            },
             dist: {
                 options: {
                     patterns: [
@@ -68,7 +67,8 @@ module.exports = function(grunt) {
                         dest: 'dev/'
                     }
                 ]
-            },
+            }
+        },
 
         htmlmin: {
             dist: {
@@ -89,7 +89,6 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-replace');
     grunt.loadNpmTasks('grunt-contrib-htmlmin');
     grunt.loadNpmTasks('grunt-contrib-clean');
-    grunt.loadNpmTasks('grunt-text-replace');
 
     grunt.registerTask('default', ['watch', 'replace']);
     grunt.registerTask('build', ['less:production', 'htmlmin:dist', 'replace:dist', 'clean']);
